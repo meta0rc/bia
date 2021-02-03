@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4cb5f1531d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Bia - Mar de Acessórios</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <a href="index.html">
+            <img src="../imagens/logo.jpg" alt="logo">
+        </a>
+        </div>
+        <input type="checkbox" id="chec" onclick="call_menu()">
+        <label for="chec">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="carrinho" class="carrinho"><i class="fas fa-shopping-cart"></i>
+            <span id="cart">Carrinho</span>
+        <div class="search">
+            <input type="search" name="Buscar" id="search-bar" placeholder="Buscar...">
+            <i class="fas fa-search"></i>
+        </div>
+       
+        
+     
+            <div class="icons">
+
+                </a>
+                <a class="insta" href="https://www.instagram.com/biamardeacessorios/">
+                    <i class="fab fa-instagram"></i></a>
+            
+              
+                   
+                
+                  
+              
+            </div>
+            <span class="mail">Email: bia@example.com.br</span>
+       
+               
+            
+           
+            
+        <nav id="menu_nav">
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Sobre</a></li>
+                
+                    <input type="checkbox"  id="drop" onclick="expand()">
+                    <label for="drop">
+                        <li><a>Acessórios <i class="fas fa-chevron-down"></i> </a>
+                    </label>
+                    <ul id="submenu">
+                        <li><a href="#">Colares femininos</a></li>
+                        <li><a href="#">Colares Masculinos</a></li>
+                        <li><a href="#">Brincos</a></li>
+                        <li><a href="#">Pulseiras</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <!--
+ <div class="banner">
+            <img src="../imagens/banner modelo.PNG" alt="">
+            <div class="compra">
+                <a href="http://mercadolivre.com.br/">Compre Agora</a>
+            </div>
+        </div>
+        -->
+       
+      
+     
+        <div class="products">
+            <a href="index.html"><h3 class="title-prd"><i class="fas fa-chevron-left"></i> Colar de Prata</h3> </a>
+            <div class="product-image">
+                
+                    <ul>
+                        <li> <img src="../imagens/colar-1.jpg" class="product-image"></li>
+                    </ul>
+                
+            </div>
+            <div class="product-describe">
+                Colar de diamante cravejado com querubins, esse é apenas um texto inormativo. Totalmente puro
+            </div>
+
+            <div class="product-info">
+                Informações sobre o produto 
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+        </div>
+     
+            <div class="product-preco">
+                <div class="product-price-prd">
+                    <span class="previos"> R$ 49,90</span> 
+                    <span class="price-prd">R$ 39,90</span>
+                    <span class="alternative-prince-prd">Ou 12x de R$ 1,50.</span>
+                </div>
+                
+                <div class="product-pay-prd">
+                    <a href="http://mercadolivre.com.br/">Comprar</a>
+                    
+                </div>
+            </div>
+        
+        
+    </section>
+    
+    <script>
+        let car = document.getElementById("cart") //aqui é sómente para adicionar na frente 
+        let carrinho = 0
+        const buttonAdd = document.getElementsByClassName(".btn-add-cart")
+        car.innerText = 0
+
+            function alter(){
+               
+                while((buttonAdd).click == false){
+                    carrinho = carrinho + 1;
+                    alert("Eu sou")
+                }
+                
+                carrinho++;
+                car.innerText = carrinho
+            }
+            buttonAdd.onclick = function(){
+                swal("ola mundo")
+            }
+        const bars = document.getElementById("chec")
+        const nav = document.getElementById("menu_nav")
+        const icon_bar = document.getElementsByClassName(".fa fa-bars")
+       
+        function call_menu(){
+
+               if((bars).checked == true) {
+                  nav.classList.add("selected")
+                  icon_bar.style.color = '#000'
+                  
+               }
+               else{
+                nav.classList.remove("selected")
+               }
+        }
+            function expand(){
+                const drop_menu = document.getElementById("drop")
+                const sub = document.getElementById("submenu")
+                    if((drop).checked == true) {
+                        sub.classList.add("selected_2")
+                    }
+                    else{
+                        sub.classList.remove("selected_2")
+                    }
+            }
+            
+    </script>
+</body>
+</html>
